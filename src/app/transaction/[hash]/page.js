@@ -92,7 +92,7 @@ export default async function Transaction({params}) {
                     <div className="value">{receipt.status === "0x1" ? <span id="success"><i className="bi bi-check-circle-fill"></i>Success</span> : "Failed"}</div>
                 </div>
                 <div className="field">
-                    <div className="name">Block Number:</div>
+                    <div className="name">Block:</div>
                     <div className="value">{Number(receipt.blockNumber)}</div>
                 </div>
                 <div className="field border-bottom">

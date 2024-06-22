@@ -25,7 +25,7 @@ body{
   background-color: #f8f9fa;
 }
 
-#address{
+#search-val{
   font-size: 1em;
   padding: 0.5em 1em;
   width: 500px;
@@ -34,7 +34,7 @@ body{
   border-radius: 0.5em;
 }
 
-#address:focus {
+#search-val:focus {
   outline: 1px solid #0784c3;
 }
 
@@ -80,4 +80,10 @@ body{
 
 .border-bottom {
   border-bottom: 1px solid #e9eecf;
+}
+
+#address {
+  border: 1px solid #e9eecf;
+  background-color: #fff;
+  border-radius: 0.5em;
 }
