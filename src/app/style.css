@@ -67,3 +67,17 @@ body{
   color: #6c757d;
   width: 200px;
 }
+
+#success {
+  color: #00a186;
+  background-color: #EAF5F3;
+  font-weight: bold;
+  border: 1px solid #00a186;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 0.75em;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e9eecf;
+}
