@@ -1,5 +1,6 @@
 require("dotenv").config();
 import { ethers } from "ethers";
+import tokenJson from "../../token.json";
 
     const infuraUrl=`https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`;
 
@@ -24,8 +25,16 @@ import { ethers } from "ethers";
         return resJson.result;
     }
 
+    const getTokenBalance= async (tokenAddress,wallet) => {
+        const provider= new ethers.JsonRpcProvider(process.env.INFURA_RPC_URL);
+        const token= new ethers.Contract(tokenAddress,tokenJson.abi,provider);
+        const res=await token.balanceOf(wallet);
+        return res;
+    }
+
 export default async function Address({params}) {
     const balance=await getBalance(params.address);
+    const usdcBalance=await getTokenBalance(tokenJson.usdcAddress,params.address);
     
     return (
         <main id="main">
@@ -42,6 +51,10 @@ export default async function Address({params}) {
                 <div className="field">
                     <div className="name">ETH Balance:</div>
                     <div className="value">{ethers.formatEther(balance)} ETH</div>
+                </div>
+                <div className="field">
+                    <div className="name">USDC Balance:</div>
+                    <div className="value">{ethers.formatUnits(usdcBalance,6)} USDC</div>
                 </div>
             </div>
           </div>
