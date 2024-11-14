@@ -77,9 +77,9 @@ export default async function Transaction({params}) {
 
     return (
         <main id="main">
-          <h1 id="title">SK's Blockchain Explorer</h1>
+          <h1 id="title">Blockchain Explorer</h1>
           <div id="header">
-            Ethereum Blockchain Explorer by Saurabh Kaplas
+            Ethereum Blockchain Explorer
           </div>
           <div id="content">
             <div id="transaction">
