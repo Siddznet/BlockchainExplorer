@@ -1,5 +1,6 @@
 # Blockchain Explorer
-## View live deployment: https://blockchainexplorer.netlify.app/
+## View live deployment: blockchain-explorer-rose.vercel.app
+
 
 ## Getting Started
 
